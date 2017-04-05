@@ -1,0 +1,43 @@
+<my-navbar></my-navbar>
+<form class="form-horizontal">
+    <fieldset>
+        <legend>Add Student</legend>
+        <div class="form-group">
+            <label for="select" class="col-lg-2 control-label">Select Class</label>
+            <div class="col-lg-10">
+                <select class="form-control" id="select"  ng-model="className" required>
+                    <option  ng-repeat="class in selectClasses">{{class.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="studentName" class="col-lg-2 control-label">Student Name</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="studentName" placeholder="Student Name" ng-model="studentName" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="mark1" class="col-lg-2 control-label">Subject1</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="mark1" placeholder="Mark for Subject1" ng-model="subject1mark" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="mark2" class="col-lg-2 control-label">Subject2</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="mark2" placeholder="Mark for Subject2" ng-model="subject2mark" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="mark3" class="col-lg-2 control-label">Subject3</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="mark3" placeholder="Mark for Subject3" ng-model="subject3mark" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="submit" class="btn btn-primary" ng-click="addStudent(className,studentName,subject1mark,subject2mark,subject3mark)">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

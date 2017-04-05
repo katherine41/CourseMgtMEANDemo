@@ -1,0 +1,46 @@
+<my-navbar></my-navbar>
+<form class="form-horizontal">
+    <fieldset>
+        <legend>Monitor Class</legend>
+        <div class="form-group">
+            <label for="selectClass" class="col-lg-2 control-label">Select Class</label>
+            <div class="col-lg-10">
+                <select class="form-control" id="selectClass" ng-model="selectedClass" ng-change="selectedClassChanged()">
+                    <option  ng-repeat="class in selectClasses">{{class.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="selectStudent" class="col-lg-2 control-label">Select Student</label>
+            <div class="col-lg-10">
+                <select class="form-control" id="selectStudent" ng-model="selectedStudent" ng-change="selectedStudentChanged()">
+                    <option  ng-repeat="student in selectStudents">{{student.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="mark1" class="col-lg-2 control-label">Subject1</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="mark1" placeholder="Mark for Subject1" ng-model="currentStudent.subject1" disabled>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="mark2" class="col-lg-2 control-label">Subject2</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="mark2" placeholder="Mark for Subject2" ng-model="currentStudent.subject2"  disabled>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="mark3" class="col-lg-2 control-label">Subject3</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="mark3" placeholder="Mark for Subject3" ng-model="currentStudent.subject3"  disabled>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="average" class="col-lg-2 control-label">Average</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="average" placeholder="Average" ng-model="average" disabled>
+            </div>
+        </div>
+    </fieldset>
+</form>
